@@ -1,0 +1,37 @@
+name: qiquiz_app
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.17.0
+  firebase_auth: ^4.10.1
+  http: ^1.1.0
+  font_awesome_flutter: ^9.1.0
+  cloud_firestore: ^4.13.2
+  logger: ^2.0.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/geografia.png
+    - assets/images/fisica.png
+    - assets/images/historia.png
+    - assets/images/biologia.png
+
+  fonts:
+    - family: Monoton
+      fonts:
+        - asset: assets/fonts/Monoton-regular.ttf
