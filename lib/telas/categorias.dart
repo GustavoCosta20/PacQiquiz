@@ -16,7 +16,7 @@ class Categoria extends StatelessWidget {
           style: TextStyle(color: Color(0xFF2D5D70)),
         ),
         iconTheme: const IconThemeData(
-          color: Color(0xFF2D5D70), // Defina a cor desejada para o ícone
+          color: Color(0xFF2D5D70), // muda cor do ícone
         ),
       ),
       drawer: Drawer(
@@ -142,8 +142,7 @@ class Categoria extends StatelessWidget {
                             ],
                           ),
                           Container(
-                            margin: const EdgeInsets.only(
-                                top: 30), // Ajuste o valor conforme necessário
+                            margin: const EdgeInsets.only(top: 30),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [

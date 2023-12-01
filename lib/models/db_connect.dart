@@ -12,7 +12,7 @@ class DBconnect {
       List<Question> newQuestions = [];
 
       data.forEach((key, value) {
-        // Adicione esta condição para verificar se a pergunta pertence à categoria desejada
+        //  verifica se a pergunta pertence à categoria desejada
         if (value['categoria'] == categoria) {
           var newQuestion = Question(
             id: key,

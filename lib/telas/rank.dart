@@ -53,7 +53,7 @@ class _RankState extends State<Rank> {
           style: TextStyle(color: Color(0xFF2D5D70)),
         ),
         iconTheme: const IconThemeData(
-          color: Color(0xFF2D5D70), // Defina a cor desejada para o ícone
+          color: Color(0xFF2D5D70), // cor do ícone
         ),
       ),
       drawer: Drawer(
@@ -144,9 +144,8 @@ class _RankState extends State<Rank> {
                             children: [
                               for (int i = 0; i < ranking.length; i++)
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical:
-                                          4.0), // Reduzi o espaçamento vertical aqui
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 4.0),
                                   child: ListTile(
                                     title: Text(
                                       '${i + 1}º  ${ranking[i]['nome']}',

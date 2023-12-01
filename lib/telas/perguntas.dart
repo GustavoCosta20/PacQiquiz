@@ -80,7 +80,7 @@ class _Perguntas extends State<Perguntas> {
 
   void startOver() {
     AutenticacaoServico()
-        .atualizarPontuacao(score); // Adiciona a pontuação atual ao Firebase
+        .atualizarPontuacao(score); // Adiciona pontuação ao Firebase
 
     setState(() {
       index = 0;
@@ -112,8 +112,7 @@ class _Perguntas extends State<Perguntas> {
                   style: TextStyle(color: Color(0xFF2D5D70)),
                 ),
                 iconTheme: const IconThemeData(
-                  color:
-                      Color(0xFF2D5D70), // Defina a cor desejada para o ícone
+                  color: Color(0xFF2D5D70), //  cor do ícone
                 ),
                 actions: [
                   Padding(
@@ -219,7 +218,6 @@ class _Perguntas extends State<Perguntas> {
                               SizedBox(
                                 height: 32,
                               ),
-                              // Outros widgets do formulário aqui
                             ],
                           ),
                         ),

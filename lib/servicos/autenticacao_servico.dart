@@ -11,17 +11,21 @@ class AutenticacaoServico {
     required String email,
   }) async {
     try {
-      UserCredential userCredential = await _firebaseAuth.createUserWithEmailAndPassword(
+      UserCredential userCredential =
+          await _firebaseAuth.createUserWithEmailAndPassword(
         email: email,
         password: senha,
       );
 
       await userCredential.user!.updateDisplayName(nome);
 
-      // Adiciona o usuário ao Firestore
-      await _firestore.collection('usuarios').doc(userCredential.user!.uid).set({
+      // adiciona usuário ao Firestore
+      await _firestore
+          .collection('usuarios')
+          .doc(userCredential.user!.uid)
+          .set({
         'nome': nome,
-        'pontuacao': 0, // Inicia a pontuação do usuário com 0
+        'pontuacao': 0, // inicia a pontuação do usuário com 0
       });
 
       return null;
@@ -38,7 +42,8 @@ class AutenticacaoServico {
     required String senha,
   }) async {
     try {
-      await _firebaseAuth.signInWithEmailAndPassword(email: email, password: senha);
+      await _firebaseAuth.signInWithEmailAndPassword(
+          email: email, password: senha);
       return null;
     } on FirebaseAuthException catch (e) {
       return e.message;
@@ -63,7 +68,8 @@ class AutenticacaoServico {
     User? user = _firebaseAuth.currentUser;
 
     if (user != null) {
-      DocumentSnapshot userSnapshot = await _firestore.collection('usuarios').doc(user.uid).get();
+      DocumentSnapshot userSnapshot =
+          await _firestore.collection('usuarios').doc(user.uid).get();
       return userSnapshot['pontuacao'] ?? 0;
     }
 
@@ -71,7 +77,11 @@ class AutenticacaoServico {
   }
 
   Future<List<QueryDocumentSnapshot>> obterRanking() async {
-    QuerySnapshot rankingSnapshot = await _firestore.collection('usuarios').orderBy('pontuacao', descending: true).limit(10).get();
+    QuerySnapshot rankingSnapshot = await _firestore
+        .collection('usuarios')
+        .orderBy('pontuacao', descending: true)
+        .limit(10)
+        .get();
     return rankingSnapshot.docs;
   }
 }

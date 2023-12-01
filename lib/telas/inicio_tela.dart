@@ -18,7 +18,7 @@ class InicioTela extends StatelessWidget {
           style: TextStyle(color: Color(0xFF2D5D70)),
         ),
         iconTheme: const IconThemeData(
-          color: Color(0xFF2D5D70), // Defina a cor desejada para o ícone
+          color: Color(0xFF2D5D70), // cor do ícone
         ),
       ),
       drawer: Drawer(
@@ -69,8 +69,8 @@ class InicioTela extends StatelessWidget {
                   height: 32,
                 ),
                 SizedBox(
-                  height: 80, // Defina a altura desejada
-                  width: 200, // Defina a largura desejada
+                  height: 80,
+                  width: 200,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -83,7 +83,7 @@ class InicioTela extends StatelessWidget {
                       backgroundColor: const Color.fromARGB(255, 28, 136, 144),
                       shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.circular(10.0), // Valor de raio
+                            BorderRadius.circular(10.0), // valor do raio
                       ),
                       elevation: 5,
                     ),
@@ -97,8 +97,8 @@ class InicioTela extends StatelessWidget {
                   height: 16,
                 ),
                 SizedBox(
-                    height: 80, // Defina a altura desejada
-                    width: 200, // Defina a largura desejada
+                    height: 80,
+                    width: 200,
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -121,8 +121,7 @@ class InicioTela extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white, fontSize: 23.0)),
                           FaIcon(
-                            FontAwesomeIcons
-                                .trophy, // Ícone de troféu do pacote font_awesome_flutter
+                            FontAwesomeIcons.trophy, // Ícone de troféu
                             color: Colors.white,
                             size: 24, // Tamanho do ícone
                           ),
